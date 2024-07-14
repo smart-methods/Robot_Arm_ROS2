@@ -20,7 +20,7 @@ sudo apt-get update && sudo apt-get install -y \
 
 1- Clone the repo:
 ```
-hhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhh
+https://github.com/Mjd0001/Robot_Arm_ROS2.git
 ```
 2- Build the ROS 2 workspace
 ```
