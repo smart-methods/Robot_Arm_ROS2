@@ -12,8 +12,12 @@ sudo apt-get update && sudo apt-get install -y \
      ros-humble-gazebo-ros \
      ros-humble-xacro \
      ros-humble-ros2-control \
+     ros-humble-ros2-controllers \
+     ros-humble-joint-state-broadcaster \
+     ros-humble-joint-trajectory-controller \
+     ros-humble-controller-manager
      ros-humble-moveit \
-     ros-humble-gazebo-ros2-control 
+     ros-humble-gazebo-ros2-control
 ```
 ## Installation
 
