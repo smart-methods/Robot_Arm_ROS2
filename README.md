@@ -13,7 +13,6 @@ sudo apt-get update && sudo apt-get install -y \
      ros-humble-xacro \
      ros-humble-ros2-control \
      ros-humble-moveit \
-     ros-humble-ros2-controller \
      ros-humble-gazebo-ros2-control 
 ```
 ## Installation
