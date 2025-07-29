@@ -47,7 +47,7 @@ You can also connect with hardware by running on another terminal:
 ```
 ros2 run arduinobot_description joint_trajectory.py --ros-args -p port:=/dev/ttyUSB0
 ```
-Make sure is enabled 
+Make sure the port is enabled 
 ```
 sudo chmod 777 /dev/ttyUSB0
 ```
@@ -69,12 +69,12 @@ You can also connect with hardware by running on another terminal:
 ```
 ros2 run arduinobot_description joint_trajectory.py --ros-args -p port:=/dev/ttyUSB0
 ```
-Make sure is enabled 
+Make sure the port is enabled 
 ```
 sudo chmod 777 /dev/ttyUSB0
 ```
 #### Simulation
-run the following commands, each command in a separate terminal window:
+Run the following commands, each command in a separate terminal window:
 ```
 ros2 launch arduinobot_description simulation.launch.py 
 ```
