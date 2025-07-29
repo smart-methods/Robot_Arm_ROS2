@@ -9,7 +9,5 @@
 
     <node pkg="joint_state_publisher_gui" exec="joint_state_publisher_gui" />
 
-    <node pkg="rviz2" exec="rviz2" output="screen">
-        <arg name="args" value="-d $(find-pkg-share arduinobot_description)/rviz/display.rviz"/>
-    </node>
+    <node pkg="rviz2" exec="rviz2" output="screen" />
 </launch>
