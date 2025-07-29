@@ -18,7 +18,6 @@ endif()
 
 
 install(DIRECTORY config DESTINATION share/${PROJECT_NAME})
-install(FILES .setup_assistant DESTINATION share/${PROJECT_NAME})
 
 install(
   PROGRAMS
@@ -27,13 +26,3 @@ install(
 )
 
 
-add_executable(time_param_node src/time_param_node.cpp)
-ament_target_dependencies(time_param_node
-  rclcpp
-  moveit_ros_planning_interface
-  moveit_core
-)
-
-install(TARGETS time_param_node
-  DESTINATION lib/${PROJECT_NAME}
-)
