@@ -74,7 +74,7 @@ void processInput(String data) {
 
   if (moved) {
     digitalWrite(LED, HIGH);
-    delay(300);
+    delay(500);
     digitalWrite(LED, LOW);
   }
 }
