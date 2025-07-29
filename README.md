@@ -1,5 +1,5 @@
 # Robot_Arm_ROS2
-A ROS2 package designed for planning and executing motion trajectories of a robot arm in simulation and real-life robot, utilizing the Moveit plugin for applying kinematics.
+A ROS2 package designed for planning and executing motion trajectories of a robot arm in simulation and real-life, utilizing the Moveit plugin for applying kinematics.
 
 
 These packages were tested under ROS2 Humble and Ubuntu 22.04 .
