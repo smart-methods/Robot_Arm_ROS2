@@ -1,5 +1,5 @@
-# Robot_Arm_ROS2
-A ROS2 package designed for planning and executing motion trajectories of a robot arm in simulation, utilizing the Moveit plugin for applying kinematics.
+<img width="1026" height="88" alt="image" src="https://github.com/user-attachments/assets/90febbe4-f22f-4a9e-afea-4ac2160d18d6" /># Robot_Arm_ROS2
+A ROS2 package designed for planning and executing motion trajectories of a robot arm in simulation and real-life robot, utilizing the Moveit plugin for applying kinematics.
 
 
 These packages were tested under ROS2 Humble and Ubuntu 22.04 .
@@ -21,13 +21,16 @@ sudo apt-get update && sudo apt-get install -y \
 ```
 ## Installation
 
-1- Clone the repo:
-```
-https://github.com/Mjd0001/Robot_Arm_ROS2.git
-```
-2- Build the ROS 2 workspace
+1- Build the colcon ROS2 workspace
 ```
 cd ~/your_ws
+```
+```
+colcon build
+```
+1- Clone the repo in src folder:
+```
+https://github.com/smart-methods/Robot_Arm_ROS2.git
 ```
 ```
 colcon build
@@ -39,20 +42,47 @@ colcon build
 ## Usage
 ### Controlling the robot arm by joint_state_publisher
 ```
-$ ros2 launch arduinobot_description display.launch.xml
+ros2 launch arduinobot_description display.launch.xml
 ```
 ![image](https://github.com/user-attachments/assets/683164ab-a99e-47db-96a4-0590e61944f3)
 
+You can also connect with hardware by running on another terminal:
+```
+ros2 run arduinobot_description joint_trajectory.py --ros-args -p port:=/dev/ttyUSB0
+```
+Make sure is enabled 
+```
+sudo chmod 777 /dev/ttyUSB0
+```
+#### Simulation
+```
+ros2 launch arduinobot_description display.launch.xml
+```
+```
+ros2 launch arduinobot_description simulation.launch.py 
+```
+```
+ros2 run arduinobot_description joint_trajectory.py
+```
 ### Controlling the robot arm by Moveit and kinematics
+```
+ros2 launch  arduinobot_mc demo.launch.py 
+```
+You can also connect with hardware by running on another terminal:
+```
+ros2 run arduinobot_description joint_trajectory.py --ros-args -p port:=/dev/ttyUSB0
+```
+Make sure is enabled 
+```
+sudo chmod 777 /dev/ttyUSB0
+```
+#### Simulation
 run the following commands, each command in a separate terminal window:
 ```
-ros2 launch arduinobot_description gazebo.launch.py
+ros2 launch arduinobot_description simulation.launch.py 
 ```
 ```
-ros2 launch arduinobot_controller controller.launch.py
-```
-```
-ros2 launch arduinobot_moveit moveit.launch.py
+ros2 launch  arduinobot_mc demo.launch.py
 ```
 ![image](https://github.com/user-attachments/assets/65746bab-c6e4-4580-9295-0283a7764b16)
 
