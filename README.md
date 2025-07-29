@@ -1,4 +1,4 @@
-<img width="1026" height="88" alt="image" src="https://github.com/user-attachments/assets/90febbe4-f22f-4a9e-afea-4ac2160d18d6" /># Robot_Arm_ROS2
+# Robot_Arm_ROS2
 A ROS2 package designed for planning and executing motion trajectories of a robot arm in simulation and real-life robot, utilizing the Moveit plugin for applying kinematics.
 
 
@@ -21,17 +21,14 @@ sudo apt-get update && sudo apt-get install -y \
 ```
 ## Installation
 
-1- Build the colcon ROS2 workspace
+1- Clone the repo in src folder of your workspace:
 ```
-cd ~/your_ws
+cd ~/ros2_ws/src
 ```
-```
-colcon build
-```
-1- Clone the repo in src folder:
 ```
 https://github.com/smart-methods/Robot_Arm_ROS2.git
 ```
+2- Install all dependencies, then build
 ```
 colcon build
 ```
