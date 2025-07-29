@@ -1,0 +1,7 @@
+trajectory_execution:
+  allowed_start_tolerance: 0.01
+  stop_on_goal_failure: true
+  allowed_execution_duration_scaling: 1.2
+  allowed_goal_duration_margin: 0.5
+  trajectory_duration_monitoring: true
+  time_parameterization_plugin: iterative_time_parameterization/IterativeParabolicTimeParameterization

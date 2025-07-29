@@ -1,18 +1,16 @@
 controller_manager:
   ros__parameters:
-    update_rate: 10 # Hz
+    update_rate: 100  # Match update rate with ros2_controllers.yaml
+
+    joint_state_broadcaster:
+      type: joint_state_broadcaster/JointStateBroadcaster
+      publish_rate: 50
 
     arm_controller:
       type: joint_trajectory_controller/JointTrajectoryController
 
-    # gripper_controller:
-    #   type: forward_command_controller/ForwardCommandController
-
     gripper_controller:
-      type: joint_trajectory_controller/JointTrajectoryController
-
-    joint_state_broadcaster:
-      type: joint_state_broadcaster/JointStateBroadcaster
+      type: position_controllers/GripperActionController
 
 arm_controller:
   ros__parameters:
@@ -30,17 +28,20 @@ arm_controller:
     open_loop_control: true
     allow_integration_in_goal_trajectories: true
 
+    state_publish_rate: 50.0
+    action_monitor_rate: 10.0
+
+    initial_positions:
+      joint_1: 0.0
+      joint_2: 0.0
+      joint_3: 0.0
+
 gripper_controller:
   ros__parameters:
-    joints:
-      - joint_4
-    # interface_name: position
-      
-    command_interfaces:
-      - position
+    joint: joint_4
 
-    state_interfaces:
-      - position
+    state_publish_rate: 50.0
+    action_monitor_rate: 10.0
 
-    open_loop_control: true
-    allow_integration_in_goal_trajectories: true
+    initial_positions:
+      joint_4: 0.0
