@@ -81,5 +81,6 @@ ros2 launch arduinobot_description simulation.launch.py
 ```
 ros2 launch  arduinobot_mc demo.launch.py
 ```
-![image](https://github.com/user-attachments/assets/65746bab-c6e4-4580-9295-0283a7764b16)
+![image](https://github.com/user-attachments/assets/ec9c4153-e948-4523-b47b-eeb9ce7db230
+<img width="1504" height="692" alt="image" src="https://github.com/user-attachments/assets/ec9c4153-e948-4523-b47b-eeb9ce7db230" />
 
